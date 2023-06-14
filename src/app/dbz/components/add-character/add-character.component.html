@@ -1,20 +1,21 @@
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <h3>Agregar Personaje</h3>
-        </div>
-    </div>
-    <form class="row" (ngSubmit)="emitCharacter()">
-        <input  type="text" 
-                class="form-control mb-2"
-                name="name"
-                [(ngModel)]="character.name"
-                placeholder="Nombre">
-        <input  type="number" 
-                class="form-control mb-2"
-                name="power"
-                [(ngModel)]="character.power"
-                placeholder="Poder">
-        <button type="submit" class="btn btn-primary">Agregar</button>
-    </form>
-</div>
+<h4>Agregar Personaje</h4>
+
+<form (ngSubmit)="emitCharacter()" class="row">
+  <input
+    [(ngModel)]="character.name"
+    name="name"
+    type="text"
+    class="form-control mb-2"
+    placeholder="Nombre"
+  />
+
+  <input
+    [(ngModel)]="character.power"
+    name="power"
+    type="number"
+    class="form-control mb-2"
+    placeholder="Poder"
+  />
+
+  <button type="submit" class="btn btn-primary">Agregar</button>
+</form>
